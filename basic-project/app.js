@@ -1,14 +1,19 @@
-function add(n1, n2, showResult, phrase) {
-    var result = n1 + n2;
-    if (showResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
+// const person: {
+//   name: string
+//   age: number
+// } = {
+//   name: 'Gale',
+//   age: 34
+// }
+var person = {
+    name: 'Gale',
+    age: 34,
+    hobbies: ['Sports', 'Shooting']
+};
+var favouriteActivities;
+favouriteActivities: ['Sports', 1];
+console.log(person.name);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = 'Result is: ';
-var result = add(number1, number2, printResult, resultPhrase);

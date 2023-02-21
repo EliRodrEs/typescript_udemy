@@ -1,15 +1,21 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  const result = n1 + n2
-  if (showResult) {
-    console.log(phrase + result)
-  } else {
-    return result
-  }
+// const person: {
+//   name: string
+//   age: number
+// } = {
+//   name: 'Gale',
+//   age: 34
+// }
+
+const person = {
+  name: 'Gale',
+  age: 34,
+  hobbies: ['Sports', 'Shooting']
 }
 
-const number1 = 5
-const number2 = 2.8
-const printResult = true
-const resultPhrase = 'Result is: '
+let favouriteActivities: any[]
+favouriteActivities: ['Sports', 1]
+console.log(person.name)
 
-const result = add(number1, number2, printResult, resultPhrase)
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase())
+}
