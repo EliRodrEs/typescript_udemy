@@ -1,4 +1,4 @@
-// const person: {
+// let person1: {
 //   name: string
 //   age: number
 // } = {
@@ -6,7 +6,7 @@
 //   age: 34
 // }
 
-// const person: {
+// let person2: {
 //   name: string
 //   age: number
 //   hobbies: string[]
@@ -29,18 +29,22 @@
 
 enum Role { ADMIN = 5, READ_ONLY = 100, AUTHOR = 'AUTHOR' }
 
-const person = {
+let person3 = {
   name: 'Gale',
   age: 34,
   hobbies: ['Sports', 'Shooting'],
   role: Role.ADMIN
 }
 
-for (const hobby of person.hobbies) {
+for (const hobby of person3.hobbies) {
   console.log(hobby.toUpperCase())
 }
 
-function combine(input1: number | string, input2: number | string, resultConversion: 'as-number' | 'as-text') {
+
+type Combinable = number | string
+type ConversionDescriptor = 'as-number' | 'as-text'
+
+function combine(input1: Combinable, input2: Combinable, resultConversion: ConversionDescriptor) {
   let result
   if (typeof input1 === 'number' && typeof input2 === 'number') {
     result = input1 + input2

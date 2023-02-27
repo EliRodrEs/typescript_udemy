@@ -1,11 +1,11 @@
-// const person: {
+// let person1: {
 //   name: string
 //   age: number
 // } = {
 //   name: 'Gale',
 //   age: 34
 // }
-// const person: {
+// let person2: {
 //   name: string
 //   age: number
 //   hobbies: string[]
@@ -24,17 +24,38 @@
 // const AUTHOR = 2
 var Role;
 (function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+    Role[Role["ADMIN"] = 5] = "ADMIN";
+    Role[Role["READ_ONLY"] = 100] = "READ_ONLY";
+    Role["AUTHOR"] = "AUTHOR";
 })(Role || (Role = {}));
-var person = {
+var person3 = {
     name: 'Gale',
     age: 34,
     hobbies: ['Sports', 'Shooting'],
     role: Role.ADMIN
 };
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+for (var _i = 0, _a = person3.hobbies; _i < _a.length; _i++) {
     var hobby = _a[_i];
     console.log(hobby.toUpperCase());
 }
+function combine(input1, input2, resultConversion) {
+    var result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    if (resultConversion === 'as-number') {
+        return +result;
+    }
+    else {
+        return result.toString();
+    }
+}
+var combinedAges = combine(30, 26, 'as-number');
+console.log(combinedAges);
+var combinedStringAges = combine('30', '26', 'as-number');
+console.log(combinedStringAges);
+var combinedNames = combine('Gale', 'Carter', 'as-text');
+console.log(combinedNames);
